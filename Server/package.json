@@ -1,0 +1,16 @@
+{
+  "name": "godot-fps-tutorial-server",
+  "version": "1.0.0",
+  "description": "This is a server for godot fps tutorial",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "*",
+    "ws": "^7.5.9"
+  },
+  "author": "XJB",
+  "license": "ISC"
+}
