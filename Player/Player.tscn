@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="CylinderShape" id=3]
+radius = 0.55804
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Avatar" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.7, 0, 0.5, -1.14044e-07, 0, 0.927619, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Weapon" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0.391306, 1.29236, -0.766852 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Target" type="Position3D" parent="Weapon"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.76837e-07, -1.66474 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00047, 0 )
+shape = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51796, -0.349331 )
+far = 8192.0
